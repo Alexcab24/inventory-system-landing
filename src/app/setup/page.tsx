@@ -2,20 +2,16 @@
 
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { useEffect, Suspense } from 'react';
+import { Suspense } from 'react';
 
 function SetupContent() {
     const searchParams = useSearchParams();
     const email = searchParams.get('email');
     const workspace = searchParams.get('workspace');
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            window.location.href = `http://${workspace}.localhost:3000/auth/register?email=${encodeURIComponent(email || '')}&workspace=${workspace}`;
-        }, 10000);
-
-        return () => clearTimeout(timer);
-    }, [workspace, email]);
+    const handleNext = () => {
+        window.location.href = `https://${workspace}.inventary-app-test.lat/auth/register?email=${encodeURIComponent(email || '')}&workspace=${workspace}`;
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-white">
@@ -78,12 +74,12 @@ function SetupContent() {
                                         <span className="text-gray-700">Espacio de trabajo creado</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center animate-spin">
-                                            <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                        <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                                            <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <span className="text-gray-700">Preparando formulario de registro</span>
+                                        <span className="text-gray-700">Formulario de registro listo</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
@@ -105,9 +101,9 @@ function SetupContent() {
                                 Siguiente paso: Completar información de la empresa
                             </h2>
                             <p className="text-gray-600 mb-6">
-                                Serás redirigido automáticamente al formulario de registro donde podrás:
+                                Cuando estés listo, haz clic en el botón para continuar con el registro:
                             </p>
-                            <div className="grid md:grid-cols-3 gap-6">
+                            <div className="grid md:grid-cols-3 gap-6 mb-8">
                                 <div className="p-6 bg-blue-50 rounded-xl">
                                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                                         <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,6 +132,15 @@ function SetupContent() {
                                     <p className="text-gray-600">Preferencias básicas del sistema y configuración de seguridad</p>
                                 </div>
                             </div>
+                            <button
+                                onClick={handleNext}
+                                className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-lg hover:shadow-xl"
+                            >
+                                Continuar con el registro
+                                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
