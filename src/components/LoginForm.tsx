@@ -100,14 +100,16 @@ const LoginForm = () => {
                                             type="text"
                                             name="workspace"
                                             id="workspace"
+                                            value={workspace}
+                                            onChange={(e) => setWorkspace(e.target.value)}
                                             className="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ease-in-out"
                                             placeholder="your-company"
                                             required
                                         />
                                     </div>
-                                    <p className="mt-2 text-sm text-gray-500 transition-all duration-300 ease-in-out">
-                                        This is your workspace name
-                                    </p>
+                                    {error && (
+                                        <p className="mt-2 text-sm text-red-600">{error}</p>
+                                    )}
                                 </div>
 
                                 <button

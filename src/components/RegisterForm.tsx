@@ -22,21 +22,21 @@ const RegisterForm = () => {
             workspace: ''
         };
 
-        // Validar email
+        // Validate email
         if (!formData.email) {
-            newErrors.email = 'El correo es requerido';
+            newErrors.email = 'Email is required';
             isValid = false;
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Ingresa un correo válido';
+            newErrors.email = 'Please enter a valid email';
             isValid = false;
         }
 
-        // Validar workspace
+        // Validate workspace
         if (!formData.workspace) {
-            newErrors.workspace = 'El espacio de trabajo es requerido';
+            newErrors.workspace = 'Workspace name is required';
             isValid = false;
         } else if (!/^[a-z0-9-]+$/.test(formData.workspace)) {
-            newErrors.workspace = 'Solo letras minúsculas, números y guiones';
+            newErrors.workspace = 'Only lowercase letters, numbers and hyphens allowed';
             isValid = false;
         }
 
@@ -123,19 +123,24 @@ const RegisterForm = () => {
                         <div className="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 ease-in-out transform hover:shadow-xl hover:scale-[1.02]">
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 transition-all duration-300 ease-in-out">
-                                        Company name
+                                    <label htmlFor="workspace" className="block text-sm font-medium text-gray-700 transition-all duration-300 ease-in-out">
+                                        Workspace name
                                     </label>
                                     <div className="mt-1">
                                         <input
                                             type="text"
-                                            name="company"
-                                            id="company"
+                                            name="workspace"
+                                            id="workspace"
+                                            value={formData.workspace}
+                                            onChange={handleChange}
                                             className="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ease-in-out"
-                                            placeholder="Your Company"
+                                            placeholder="your-company"
                                             required
                                         />
                                     </div>
+                                    {errors.workspace && (
+                                        <p className="mt-2 text-sm text-red-600">{errors.workspace}</p>
+                                    )}
                                 </div>
 
                                 <div>
@@ -147,26 +152,16 @@ const RegisterForm = () => {
                                             type="email"
                                             name="email"
                                             id="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
                                             className="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ease-in-out"
                                             placeholder="you@company.com"
                                             required
                                         />
                                     </div>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="password" className="block text-sm font-medium text-gray-700 transition-all duration-300 ease-in-out">
-                                        Password
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            type="password"
-                                            name="password"
-                                            id="password"
-                                            className="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ease-in-out"
-                                            required
-                                        />
-                                    </div>
+                                    {errors.email && (
+                                        <p className="mt-2 text-sm text-red-600">{errors.email}</p>
+                                    )}
                                 </div>
 
                                 <button

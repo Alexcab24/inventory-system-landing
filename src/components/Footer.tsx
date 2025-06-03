@@ -8,7 +8,7 @@ const Footer = () => {
                     <div className="col-span-1 md:col-span-2">
                         <h3 className="text-2xl font-bold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">InventorySystem</h3>
                         <p className="text-gray-400 transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]">
-                            The ultimate solution for your company's inventory management.
+                            The ultimate solution for your company&apos;s inventory management.
                         </p>
                     </div>
                     <div>
