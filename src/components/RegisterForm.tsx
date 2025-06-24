@@ -86,37 +86,11 @@ const RegisterForm = () => {
                         {/* Left side - Text content */}
                         <div className="text-center md:text-left">
                             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 transition-all duration-700 ease-in-out transform hover:scale-[1.02]">
-                                Start your free trial
+                                Add your company
                             </h1>
                             <p className="text-xl text-gray-600 mb-8 transition-all duration-700 ease-in-out transform hover:translate-y-[-4px]">
-                                Join thousands of companies already optimizing their inventory with InventorySystem
+                                Register your company to start using InventorySystem for your team or project.
                             </p>
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-3 transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-gray-700">
-                                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110">
-                                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span>14-day free trial</span>
-                                </div>
-                                <div className="flex items-center gap-3 transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-gray-700">
-                                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110">
-                                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span>No credit card required</span>
-                                </div>
-                                <div className="flex items-center gap-3 transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-gray-700">
-                                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center transition-all duration-300 ease-in-out transform hover:scale-110">
-                                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span>24/7 support</span>
-                                </div>
-                            </div>
                         </div>
 
                         {/* Right side - Form */}
@@ -168,11 +142,11 @@ const RegisterForm = () => {
                                     type="submit"
                                     className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-y-[-2px] hover:shadow-lg"
                                 >
-                                    Start free trial
+                                    Add company
                                 </button>
 
                                 <p className="text-center text-sm text-gray-500 transition-all duration-300 ease-in-out">
-                                    By signing up, you agree to our{' '}
+                                    By registering, you agree to our{' '}
                                     <Link href="/terms" className="text-blue-600 hover:text-blue-700 transition-all duration-300 ease-in-out transform hover:translate-x-1 inline-block">
                                         Terms of Service
                                     </Link>{' '}

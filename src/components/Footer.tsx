@@ -2,54 +2,24 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white py-12">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div className="col-span-1 md:col-span-2">
-                        <h3 className="text-2xl font-bold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">InventorySystem</h3>
-                        <p className="text-gray-400 transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]">
-                            The ultimate solution for your company&apos;s inventory management.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 className="text-lg font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Links</h4>
-                        <ul className="space-y-2">
-                            <li>
-                                <Link href="/about" className="text-gray-400 hover:text-white transition-all duration-300 ease-in-out transform hover:translate-x-2 inline-block">
-                                    About us
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className="text-gray-400 hover:text-white transition-all duration-300 ease-in-out transform hover:translate-x-2 inline-block">
-                                    Contact
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/terms" className="text-gray-400 hover:text-white transition-all duration-300 ease-in-out transform hover:translate-x-2 inline-block">
-                                    Terms and conditions
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="text-lg font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Legal</h4>
-                        <ul className="space-y-2">
-                            <li>
-                                <Link href="/privacy" className="text-gray-400 hover:text-white transition-all duration-300 ease-in-out transform hover:translate-x-2 inline-block">
-                                    Privacy policy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/cookies" className="text-gray-400 hover:text-white transition-all duration-300 ease-in-out transform hover:translate-x-2 inline-block">
-                                    Cookie policy
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
+        <footer className="bg-gradient-to-t from-gray-900 via-gray-950 to-gray-900 text-white py-8 border-t border-blue-900">
+            <div className="container mx-auto px-4 flex flex-col items-center gap-2">
+                <div className="flex items-center gap-3 mb-2">
+                    <span className="inline-block w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-blue-800 flex items-center justify-center text-2xl shadow-lg border-2 border-white">👨‍💻</span>
+                    <span className="text-lg font-semibold tracking-wide">Developed by Alex Cabral</span>
                 </div>
-                <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                    <p className="transition-all duration-300 ease-in-out transform hover:scale-105">&copy; {new Date().getFullYear()} InventorySystem. All rights reserved.</p>
-                </div>
+                <Link
+                    href="https://github.com/Alexcab24"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-300 hover:text-white font-mono text-base underline underline-offset-4 hover:no-underline transition-colors"
+                >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z" />
+                    </svg>
+                    github.com/Alexcab24
+                </Link>
+                <span className="text-xs text-gray-400 mt-2">&copy; {new Date().getFullYear()} InventorySystem Project</span>
             </div>
         </footer>
     );

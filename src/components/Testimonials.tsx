@@ -1,81 +1,42 @@
-const testimonials = [
-    {
-        name: 'Mary Gonzalez',
-        role: 'CEO, TechStore',
-        content: 'InventorySystem has completely transformed our inventory management. We can now track every product in real-time.',
-        avatar: '👩‍💼',
-        company: 'TechStore'
-    },
-    {
-        name: 'Carl Rodriguez',
-        role: 'Operations Manager, Distributor XYZ',
-        content: 'The ease of use and detailed reports have helped us reduce errors by 40%. An investment worth every penny.',
-        avatar: '👨‍💼',
-        company: 'Distributor XYZ'
-    },
-    {
-        name: 'Ann Martinez',
-        role: 'Logistics Director, E-commerce Plus',
-        content: 'The integration with our e-commerce platform was perfect. We now have total control over our inventory.',
-        avatar: '👩‍💼',
-        company: 'E-commerce Plus'
-    }
-];
+import Link from 'next/link';
 
-const Testimonials = () => {
+const AboutProject = () => {
     return (
-        <section id="testimonials" className="py-20 px-4 bg-gray-50 relative overflow-hidden">
-            {/* Background decorative elements */}
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent"></div>
-
-            <div className="container mx-auto relative">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl font-bold mb-4 text-gray-900">
-                        What our clients say
+        <section id="about" className="py-24 px-4 bg-gradient-to-b from-blue-50 via-white to-white relative overflow-hidden">
+            <div className="container mx-auto flex flex-col items-center justify-center">
+                <div className="relative bg-white/90 rounded-3xl shadow-2xl border border-blue-100 max-w-2xl w-full px-8 py-12 flex flex-col items-center text-center">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-blue-500 to-blue-700 flex items-center justify-center mb-6 shadow-lg border-4 border-white">
+                        <span className="text-4xl select-none">🚀</span>
+                    </div>
+                    <h2 className="text-4xl font-extrabold mb-4 text-gray-900 tracking-tight">
+                        About this Project
                     </h2>
-                    <p className="text-xl text-gray-600">
-                        Companies that trust us for their inventory management
+                    <p className="text-lg text-gray-700 mb-6">
+                        <span className="font-semibold text-blue-700">InventorySystem</span> is a multi-tenant inventory management platform built as a personal and open project. My goal is to create a scalable, collaborative, and modern solution for real-world inventory challenges, and to share the journey and code with the community.
                     </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative"
-                        >
-                            <div className="absolute -top-4 left-8 w-8 h-8 bg-white transform rotate-45"></div>
-                            <div className="relative">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-2xl">
-                                        {testimonial.avatar}
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                                        <p className="text-sm text-blue-600 font-medium">{testimonial.company}</p>
-                                    </div>
-                                </div>
-                                <p className="text-gray-600 mb-6 italic leading-relaxed">
-                                    &ldquo;{testimonial.content}&rdquo;
-                                </p>
-                                <div className="flex gap-1">
-                                    {[...Array(5)].map((_, i) => (
-                                        <svg
-                                            key={i}
-                                            className="w-5 h-5 text-yellow-400"
-                                            fill="currentColor"
-                                            viewBox="0 0 20 20"
-                                        >
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                    <div className="mb-8 text-base text-gray-600">
+                        <p className="mb-3">
+                            <span className="font-semibold text-blue-700">Why?</span> Because I believe inventory management should be accessible, flexible, and ready for the future. This project is a playground for learning, sharing, and building something useful for teams and companies of all sizes.
+                        </p>
+                        <p>
+                            If you want to contribute, give feedback, or just say hi, feel free to reach out or check the code on GitHub!
+                        </p>
+                    </div>
+                    <Link
+                        href="https://github.com/Alexcab24/inventory-syste"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md hover:bg-blue-700 transition-all text-lg"
+                    >
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z" />
+                        </svg>
+                        Contribute on GitHub
+                    </Link>
                 </div>
             </div>
         </section>
     );
 };
 
-export default Testimonials; 
+export default AboutProject; 
