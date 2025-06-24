@@ -15,9 +15,9 @@ const Header = () => {
                         <Link href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]">
                             Testimonials
                         </Link>
-                        <Link href="#pricing" className="text-gray-600 hover:text-blue-600 transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]">
+                        {/* <Link href="#pricing" className="text-gray-600 hover:text-blue-600 transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]">
                             Pricing
-                        </Link>
+                        </Link> */}
                         <Link
                             href="/login"
                             className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 ease-in-out hover:shadow-lg transform hover:scale-105 hover:translate-y-[-2px]"

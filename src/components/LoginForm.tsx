@@ -25,7 +25,7 @@ const LoginForm = () => {
 
         if (validateWorkspace()) {
             // Redirigir al subdominio específico
-            window.location.href = `https://${workspace}.inventorysystem.com/login`;
+            window.location.href = `https://${workspace}..inventary-app-test.lat/login`;
         }
     };
 

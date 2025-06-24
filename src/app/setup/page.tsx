@@ -53,7 +53,7 @@ function SetupContent() {
                                     <div>
                                         <p className="text-sm text-gray-500">URL de tu espacio de trabajo</p>
                                         <p className="text-lg font-medium text-blue-600">
-                                            {workspace}.inventorysystem.com
+                                            {workspace}.inventary-app-test.lat
                                         </p>
                                     </div>
                                 </div>
